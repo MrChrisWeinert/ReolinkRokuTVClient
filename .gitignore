@@ -1,0 +1,19 @@
+# secrets
+backend/.env
+**/*.local
+
+# roku
+roku/out/
+roku/build/
+roku/bsconfig.json
+roku/*.pkg
+*.zip
+
+# backend
+backend/bin/
+
+# scratch media — but keep the docs snapshots
+*.jpg
+*.mp4
+!docs/*.jpg
+**/.DS_Store

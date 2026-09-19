@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+    <script type="text/brightscript" uri="pkg:/components/config.brs" />
+
+
+    <children>
+        <Rectangle id="bg" width="1920" height="1080" color="0x000000FF" />
+
+        <Video id="video" width="1920" height="1080" translation="[0,0]"
+               enableUI="false" />
+
+        <!-- channel-name banner, lower-left -->
+        <Group id="banner" translation="[60, 940]" opacity="0.0">
+            <Rectangle id="bannerBg" width="360" height="76" color="0x000000AA" />
+            <Label id="bannerText" translation="[24, 16]" width="320" height="44"
+                   font="font:LargeBoldSystemFont" />
+        </Group>
+
+        <!-- transient status (buffering / reconnecting) center screen -->
+        <Label id="status" translation="[0, 500]" width="1920" horizAlign="center"
+               opacity="0.0" font="font:LargeBoldSystemFont" />
+
+        <Timer id="bannerTimer" repeat="false" />
+        <Timer id="retryTimer" repeat="false" />
+
+        <Animation id="bannerIn" duration="0.2" repeat="false" easeFunction="linear">
+            <FloatFieldInterpolator key="[0.0, 1.0]" keyValue="[0.0, 1.0]"
+                fieldToInterp="banner.opacity" />
+        </Animation>
+        <Animation id="bannerOut" duration="0.4" repeat="false" easeFunction="linear">
+            <FloatFieldInterpolator key="[0.0, 1.0]" keyValue="[1.0, 0.0]"
+                fieldToInterp="banner.opacity" />
+        </Animation>
+    </children>
+</component>
