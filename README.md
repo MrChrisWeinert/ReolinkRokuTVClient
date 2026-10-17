@@ -5,7 +5,7 @@ the **local** Reolink NVR. No Reolink cloud, no AWS relay.
 
 ![sample mosaic](docs/wall-synced.jpg)
 
-*(a real frame off the live backend, all four tiles synced to within a couple seconds)*
+*(a real frame off the live backend [blurred for privacy], all four tiles synced to within a couple seconds)*
 
 ## How it works
 
